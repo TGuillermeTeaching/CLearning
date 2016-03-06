@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0052E085D4A1F5C8221D9E35E46104C6682EF210",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0052E085D4A1F5C8221D9E35E46104C6682EF210" : 0,
+    "E706F6A3F207EC0A9ACBDF46C4979AAB63CBFB77" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9ABD680D-E46F-43AC-8A7A-04E7702078F6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0052E085D4A1F5C8221D9E35E46104C6682EF210" : "CLearning\/",
+    "E706F6A3F207EC0A9ACBDF46C4979AAB63CBFB77" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CLearning",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CLearning\/CLearning.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TGuillermeTeaching\/CLearning.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0052E085D4A1F5C8221D9E35E46104C6682EF210"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TGuillerme\/Teaching.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E706F6A3F207EC0A9ACBDF46C4979AAB63CBFB77"
+    }
+  ]
+}
