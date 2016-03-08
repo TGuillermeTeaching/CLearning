@@ -4,19 +4,22 @@
 #include <stdio.h>
 
 int main(void) {
+    
     //variables
-    int u, v, temp;
+    int number, square;
     
-    //Scanning
-    printf("Please type in two positive integers: \n");
-    scanf("%i%i", &u, &v);
+    number = 0;
     
-    while(v != 0) {
-        temp = u % v;
-        u = v;
-        v = temp;
+    printf("SQUARE NUMBERS\n");
+    printf(" n      n^2\n");
+    printf("---   ---------\n");
+
+    
+    for (number = 1; number <= 10; ++number ) {
+        square = number * number;
+        printf("%-2i     %i\n", number, square);
     }
     
-    printf("Their greastest common divisor is %i\n", u);
+    printf("\n");
     
 }
