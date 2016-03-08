@@ -2,12 +2,21 @@
     on multiple lines*/
 
 #include <stdio.h>
-#include <math.h>
 
 int main(void) {
+    //variables
+    int u, v, temp;
     
-    long double result = (3.31e-8L * 2.01e-7L) / (7.16e-6L+2.01e-8L);
-    printf("Results = %Lf\n", result);
+    //Scanning
+    printf("Please type in two positive integers: \n");
+    scanf("%i%i", &u, &v);
     
-    return 0 ;
+    while(v != 0) {
+        temp = u % v;
+        u = v;
+        v = temp;
+    }
+    
+    printf("Their greastest common divisor is %i\n", u);
+    
 }
