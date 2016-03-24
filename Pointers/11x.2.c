@@ -19,12 +19,34 @@ struct entry *findEntry (struct entry *list_pointer, int match)
     return (struct entry *) 0;
 }
 
+struct entry *insertEntry (int *new_entry, int new_value)
+{
+    new_entry.value = new_value;
+    new_entry.next = &new_entry;
+}
+
+
+// You can solve this problem by setting up a "dummy" structure variable called listHead, 
+// for example:
+//                 struct entry  listHead;
+
+// and you can then set it pointing to the head of the list by assigning the next member of 
+// listHead to point to the actual first entry of the list:
+
+//                 listHead.next = &entry1;
+
+// Now to insert a new entry called newEntry at the front of the list, you can write:
+
+//                 insertEntry (&new_entry, &list_head);
+
 int main (void)
 {   
     struct entry *findEntry (struct entry *list_pointer, int match);
-    struct entry n1, n2, n3, n4, new_entry;
+    struct entry n1, n2, n3, n4, list_head, new_entry;
     struct entry *instertion_point, *next_entry, *list_start = &n1;;
     int place_to_insert, new_value;
+
+    list_head.nex = &n1;
 
     n1.value = 100;
     n1.next = &n2;
@@ -53,6 +75,7 @@ int main (void)
     instertion_point = findEntry (list_start, place_to_insert);
     // set list start back to 1
     list_start = &n1;
+
     next_entry = findEntry (list_start, place_to_insert);
     // set list start back to 1
     list_start = &n1;
@@ -67,7 +90,7 @@ int main (void)
     scanf("%i", &new_value);
     printf("%i will be added after %i and before %i.\n", new_value, instertion_point->value, next_entry->value);
     // set list start back to 1
-    //list_start = &n1;
+    list_start = &n1;
 
     // add the new element
     instertion_point->next = &new_entry;
