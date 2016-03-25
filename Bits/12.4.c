@@ -1,0 +1,44 @@
+// bits stuff
+
+#include <stdio.h>
+
+// Rotating bits
+unsigned int rotate (unsigned int value, int n)
+{
+    unsigned int result, bits;
+
+    //scale down the shift count to a defined range
+    if (n > 0) 
+        n = n % 32; //32 bits version
+    else
+        n = -(-n % 32);
+
+    if (n == 0)
+        result = value;
+    else if (n > 0) { // left rotate
+        bits = value >> (32 - n);
+        result = value << n | bits;
+    }
+    else { // right rotate
+        n = -n;
+        bits = value << (32 - n);
+        result = value >> n | bits;
+    }
+
+    return result;
+}
+
+int main (void)
+{
+    unsigned int rotate (unsigned int value, int n);
+    unsigned int w1 = 0xabcdef00u, w2 = 0xffff1122u;
+
+    printf("%x rotate %i bits = %x\n", w1, 8, rotate(w1, 8));
+    printf("%x rotate %i bits = %x\n", w1, -16, rotate(w1, -16));
+    printf("%x rotate %i bits = %x\n", w2, 4, rotate(w2, 4));
+    printf("%x rotate %i bits = %x\n", w2, -2, rotate(w2, -2));
+    printf("%x rotate %i bits = %x\n", w1, 0, rotate(w1, 0));
+    printf("%x rotate %i bits = %x\n", w1, 44, rotate(w1, 44));
+
+    return 0;
+}
